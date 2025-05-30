@@ -7,7 +7,11 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:5173', // or whatever port your frontend is running on
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 const SECRET_KEY = "your-secret-key";
 
@@ -79,6 +83,7 @@ app.post("/admin/signup", async (req: Request, res: Response) => {
     res.status(403).json({ message: "Admin already exists" });
   } else {
     const newAdmin = new Admin({ username, password });
+    console.log(newAdmin);
     await newAdmin.save();
     const token = jwt.sign({ username, role: "admin" }, SECRET_KEY);
     res.json({ message: "Admin created successfully", token });
