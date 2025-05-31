@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SkillSurge
 
-## Getting Started
+SkillSurge is a modern learning platform that offers high-quality courses to help users master new skills. Built with Next.js and Express, this application provides a seamless educational experience with a beautiful user interface and robust backend.
 
-First, run the development server:
+## Project Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The project is organized into two main directories:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **`/frontend`**: Contains the Next.js application that handles the user interface
+- **`/Backend`**: Contains the Express server that manages the API and database interactions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **User Authentication**: Sign up, log in, and user session management
+- **Course Browsing**: Browse through a variety of courses with detailed information
+- **Responsive Design**: Optimized UI for mobile, tablet, and desktop devices
+- **Secure API**: JWT-based authentication for secure API calls
 
-## Learn More
+## Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+- Node.js (v16 or higher)
+- npm or yarn
+- MongoDB (for the backend database)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Quick Start
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clone the repository
+2. Set up the backend
+   ```bash
+   cd Backend
+   npm install
+   npm start
+   ```
+3. Set up the frontend
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+4. Access the application at http://localhost:3000
 
-## Deploy on Vercel
+## Documentation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For detailed documentation:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Check the [Frontend README](./frontend/README.md) for information about the Next.js application
+- Check the [Backend README](./Backend/README.md) for information about the Express server
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details. 
